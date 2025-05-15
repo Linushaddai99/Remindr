@@ -1,21 +1,13 @@
 import React from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Dashboard from './routes/Dashboard'
-import routes from './routes/index'
+import { RouterProvider } from 'react-router-dom'
+import router from './routes/index'
+import { AuthContextProvider } from './context/AuthContext'
 
-const App = () => {
 
-    const router = createBrowserRouter([
-    {
-      element: <Dashboard />,
-      children: routes
-    },
-  ])
-
-  return (
+const App = () => (
+  <AuthContextProvider>
     <RouterProvider router={router} />
-  )
-}
+  </AuthContextProvider>
+)
 
 export default App
-
