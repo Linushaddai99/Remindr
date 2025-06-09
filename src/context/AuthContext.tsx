@@ -3,7 +3,6 @@ import { supabase } from '../../supabase-client'
 import type { Session } from '@supabase/supabase-js';
 
 
-
 interface AuthContextType {
   session: Session | null;
   signupNewUser: any
@@ -15,7 +14,7 @@ interface AuthContextType {
         user: any;
         session: any;
     };
-}>
+  }>
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
