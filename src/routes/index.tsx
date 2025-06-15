@@ -3,12 +3,23 @@ import SignIn from "../Auth/SignIn";
 import SignUp from "../Auth/SignUp";
 import Home from "../pages/Home";
 import Dashboard from './Dashboard'
+import Unboard from "../Auth/Unboard";
 
 
 const router = createBrowserRouter([
   // Public routes
-  { path: "/signup", element: <SignUp /> },
-  { path: "/signin", element: <SignIn /> },
+  { 
+    path: "/signup", 
+    element: <SignUp /> 
+  },
+  { 
+    path: "/signin", 
+    element: <SignIn /> 
+  },
+    { 
+    path: "/unboard", 
+    element: <Unboard /> 
+  },
 
   // Redirect root to dashboard
   { path: "/", element: <Navigate to="/dashboard" /> },

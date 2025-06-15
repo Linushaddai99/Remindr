@@ -20,12 +20,11 @@ const Dashboard = () => {
   }
 
   if (!session) {
-    return <Navigate to="/signup" />;
+    return <Navigate to="/unboard" />;
   }
-  
+
   return (
-    <div className='p-10'>
-      <h1>Welcome to Remindr</h1>
+    <div className=''>
       <Outlet />
     </div>
   )
